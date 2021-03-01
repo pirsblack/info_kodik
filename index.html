@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Инструкция добавления файлов converter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <style>
+    	.column {box-shadow: 0px 0 1px rgb(0 0 0 / 50%);}
+    </style>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      	<div class="columns">
+	  		<div class="column is-one-quarter">
+	  			<aside class="menu">
+	  				<p class="menu-label">
+    					Навигация:
+  					</p>
+  					<ul class="menu-list">
+    					<li><a href="#add_info">Добавление информации</a>
+    						<ul>
+    						<li><a href="#form_info">Поля информации</a></li>
+    						</ul>
+    					</li>
+    					<li>
+      						<a href="#info_all">Общая информация</a>
+      						<ul>
+       							<li><a href="#copy_field">Копирование полей</a></li>
+        						<li><a href="#delete_file">Почему файл удалён?</a></li>
+        						<li><a href="#return_delete">Вернуть удалённые файлы</a></li>
+      						</ul>
+    					</li>
+  					</ul>
+	  			</aside>
+	  		</div>
+	  		<div class="column">
+	  			<div class="content">
+  					<h1 id="add_info">Добавление информации к файлам</h1>
+  						<p>Чем точнее Вы будете указывать информацию,тем легче модераторам будет понять что Вы загрузили и файлы быстрее попадут в базу. Обязательное заполнение полей информации при добавлении файлов:</p>
+  						<blockquote class="has-background-info-light">
+  							<ul>
+  								<li>Для сериалов/фильмов информация берётся с <a href="https://www.kinopoisk.ru/">KinoPoisk ID</a>, <a href="https://www.imdb.com/">IMDb ID </a><span class="tag is-info">только русское название</span></li>
+  								<li>Для аниме основной источник информации <a href="http://www.world-art.ru/">world-art.ru</a>, если нет нужного релиза дополнительный источник информации <a href="https://shikimori.one/">Shikimori ID</a></li>
+  								<li>При добавлении дорам обязательно нужно указывать <a href="https://mydramalist.com/">MyDramaList ID</a></li>
+  							</ul>
+  						</blockquote>
+  						<ul id="form_info">
+    						<li>Название <span class="tag is-info">на русском</span></li>
+    						<li>Год</li>
+    						<li>Номер сезона и номер серии</li>
+    						<li>Озвучка <span class="tag is-info">как указана в базе</span></li>
+    						<li>KinoPoisk ID</li>
+    						<li>IMDb ID</li>
+    						<li>Shikimori ID <span class="tag is-primary">для аниме</span></li>
+    						<li>Ссылка на MyDramaList ID <span class="tag is-warning">для дорам</span></li>
+    						<li>Ссылка на world-art.ru <span class="tag is-primary">для аниме</span></li>
+    						<li>Ссылка на торрент</li>
+  						</ul>
+  						
+  						<blockquote class="has-background-success-light">Комментарии указываются если есть какие-то нюансы с файлом (доп. информация о озвучке, удалить файл и т.д.)</blockquote>
+  						<blockquote class="has-background-warning-light">Поле "Начать с секунды" можно оставлять пустым, оно создано только для того, если Вам нужно указать пропуск в серии.</blockquote>
+  						<blockquote class="has-background-danger-light">Если Вы загружаете новинку, можно выставлять "высокий" приоритет, чтобы конвертер быстрее брал такие файлы на обработку.</blockquote>
+  						<h2 id="info_all">Общая информация</h2>
+  						<p>После окончания конвертации файла, слева от него будет кружок, показывающий, добавлен ли ваш файл в базу модератором или еще нет. Если вам хочется как можно скорее добавить плеер на сайт, то можете скопировать ссылку на плеер прямо из конвертера.</p>
+  						<h3 id="copy_field">Копирование полей</h3>
+  							<p>Для автозаполнения полей, Вы можете копировать поля информации в базе/конвертере и вставлять их при добавлении серии в конвертере.</p>
+  							<figure>
+  								<img src="https://i.imgur.com/A2lplT5.png">
+  								<figcaption>
+      								Копирование полей в базе.
+    							</figcaption>
+    						</figure>
+    						<figure>
+  								<img src="https://i.imgur.com/RzJQ5UQ.png">
+  								<figcaption>
+      								Вставить информацию в поля.
+    							</figcaption>
+  							</figure>
+  							<h3 id="delete_file">Почему мой файл удалён?</h3>
+  							<p>Ваш файл может попасть на удаление если:</p>
+  							<ul>
+  								<li>Вы заполнили не все поля информации, при условии что в базе есть вся информация.</li>
+  								<li>Допущена ошибка в информации.</li>
+  								<li>Нерпавильный источник информации.</li>
+  								<li>Загуржены отдельные серии в сезоне, мы не добавляем незаконченные релизы.</li>
+  								<li>Если загрузили контент содержащий откровенные сцены (+18).</li>
+  							</ul>
+  							<h3 id="return_delete">Как вернуть файлы с удаления?</h3>
+  							<p>Для того чтобы вернуть файлы с удаления нужно:</p>
+  							<ol>
+  								<li>Написать в чат конвертера</li>
+  								<li>Загрузить заново файл с правильной информацией <span class="tag is-info">если не хотите ждать ответа тех. поддержки</span></li>
+  							</ol>  
+						</div>
+	  				</div>
+			</div>
+    	</div>
+  	</section>
+  </body>
+</html>
